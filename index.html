@@ -665,7 +665,7 @@
     <div class="container">
         <header>
             <span class="hello"><i class="fas fa-bolt"></i> NEON DEV</span>
-            <h1>Портфолио · Анимация перехода</h1>
+            <h1>СЛАВА ХУЕСОС</h1>
         </header>
 
         <!-- КАРТОЧКИ-КАТЕГОРИИ -->
@@ -673,7 +673,7 @@
             <div class="category-card" data-category="sites">
                 <div class="category-icon"><i class="fas fa-globe"></i></div>
                 <h2>Сайты</h2>
-                <p>9 проектов • адаптив • анимация</p>
+                <p>3 проектов • адаптив • анимация</p>
             </div>
             <div class="category-card" data-category="bots">
                 <div class="category-icon"><i class="fas fa-robot"></i></div>
@@ -691,7 +691,7 @@
         <div id="projects-sites" class="projects-container">
             <div class="projects-header">
                 <h3><i class="fas fa-globe" style="margin-right: 10px;"></i> Сайты</h3>
-                <span class="projects-count">9 проектов</span>
+                <span class="projects-count">3 проектов</span>
             </div>
             <div id="sites-scroll" class="projects-scroll"></div>
             <div id="detail-sites" class="detail-container"></div>
@@ -847,38 +847,19 @@
             cursor.style.top = e.clientY + 'px';
         });
 
-        // --- ДАННЫЕ ПРОЕКТОВ ---
+        // --- ДАННЫЕ ПРОЕКТОВ С КРАТКИМ ОПИСАНИЕМ В КАРТОЧКАХ И ПОЛНЫМ В ДЕТАЛЯХ ---
         const projectsData = {
             sites: [
                 {
                     id: 1,
-                    title: "Гостевой дом "Афины"",
+                    title: "Гостевой дом Афины",
                     icon: "fa-hotel",
-                    description: "Полноценный сайт для гостиницы с системой онлайн-бронирования.",
-                    tags: ["HTML5", "Tailwind CSS", "Google Fonts", "Yandex Maps API"],
-                    features: ["Параллакс", "Календарь броней", "Анимации скролла"],
-                    tech: ["HTML5", "Tailwind CSS", "Swiper.js", "AOS.js", "Google Fonts", "Yandex Maps API"],
+                    shortDesc: "Современный веб-интерфейс для туристического бизнеса с акцентом на UX.",
+                    fullDesc: "Современный веб-интерфейс для туристического бизнеса, разработанный с акцентом на визуальную эстетику и удобство пользователя (UX). Проект реализован как многостраничное решение (MPA), обеспечивающее высокую скорость загрузки и отличную индексацию для SEO. Основная задача сайта — эффективная презентация номерного фонда и упрощение процесса бронирования. Интеграция с внешней системой (через ссылку на 2ГИС/ReservationSteps) для моментального заказа номера.",
+                    tags: ["HTML5", "Tailwind CSS", "Vanilla JS"],
+                    features: ["Адаптивная фотогалерея", "Интерактивная карта", "Анимация при скролле", "Онлайн-бронирование", "Интеграция с 2ГИС"],
+                    tech: ["HTML5", "Tailwind CSS", "Vanilla JS", "Swiper.js", "AOS.js", "Yandex Maps API"],
                     screenshots: ["hotel1", "hotel2", "hotel3"]
-                },
-                {
-                    id: 2,
-                    title: "Архитектурное бюро",
-                    icon: "fa-building",
-                    description: "Сайт-портфолио с 3D-визуализациями проектов. Интерактивная карта построек, плавные переходы между разделами.",
-                    tags: ["Vue 3", "GSAP", "Three.js"],
-                    features: ["3D тур", "Сетка проектов", "Фильтрация"],
-                    tech: ["HTML5", "Tailwind CSS", "Swiper.js", "AOS.js", "Google Fonts", "Yandex Maps API"],
-                    screenshots: ["arch1", "arch2"]
-                },
-                {
-                    id: 3,
-                    title: "Киберспортивный клуб",
-                    icon: "fa-gamepad",
-                    description: "Лендинг с живым шейдерным фоном, глитч-эффектами и анимацией на WebGL. Трекер матчей в реальном времени.",
-                    tags: ["React", "Shader", "CSS Houdini"],
-                    features: ["WebGL фон", "Глитч-текст", "Матч-трекер"],
-                    tech: ["React", "Three.js", "GLSL"],
-                    screenshots: ["cyber1", "cyber2"]
                 }
             ],
             bots: [
@@ -886,7 +867,8 @@
                     id: 4,
                     title: "Документ-инспектор",
                     icon: "fa-table",
-                    description: "Telegram-бот: парсит Google Sheets, отслеживает истекающие сроки документов, рассылает уведомления в Telegram и на почту.",
+                    shortDesc: "Telegram-бот для отслеживания сроков документов.",
+                    fullDesc: "Telegram-бот: парсит Google Sheets, отслеживает истекающие сроки документов, рассылает уведомления в Telegram и на почту.",
                     tags: ["Python", "aiogram", "Google API"],
                     features: ["Проверка каждые 6ч", "Отчёты в PDF", "Логи в Notion"],
                     tech: ["Python", "AsyncIO", "SMTP", "Sheets API"],
@@ -896,7 +878,8 @@
                     id: 5,
                     title: "PDF → Google Sheets",
                     icon: "fa-file-pdf",
-                    description: "Бот мониторит почту, скачивает PDF-вложения, распознаёт структурированные данные и заполняет Google Sheets. Точность 97%.",
+                    shortDesc: "Бот для распознавания PDF и заполнения таблиц.",
+                    fullDesc: "Бот мониторит почту, скачивает PDF-вложения, распознаёт структурированные данные и заполняет Google Sheets. Точность 97%.",
                     tags: ["Python", "IMAP", "pdfplumber"],
                     features: ["Мониторинг вложений", "Распознавание таблиц", "Автозаполнение"],
                     tech: ["Python", "OpenCV", "Regex", "pygsheets"],
@@ -906,7 +889,8 @@
                     id: 6,
                     title: "Арома-креатор",
                     icon: "fa-spray-can-sparkles",
-                    description: "Бот для Telegram-пабликов: по названию парфюма генерирует эстетичный пост с фотографией, описанием и характеристиками.",
+                    shortDesc: "Бот для генерации постов о парфюме.",
+                    fullDesc: "Бот для Telegram-пабликов: по названию парфюма генерирует эстетичный пост с фотографией, описанием и характеристиками.",
                     tags: ["Node.js", "Telegraf", "OpenAI"],
                     features: ["База 500+ ароматов", "Генерация описаний", "Стикеры"],
                     tech: ["Node.js", "OpenAI API", "Unsplash API"],
@@ -918,7 +902,8 @@
                     id: 7,
                     title: "Контроль сроков документов",
                     icon: "fa-clock",
-                    description: "Автоматическая проверка Google Sheets, формирование отчётов и отправка напоминаний сотрудникам.",
+                    shortDesc: "Автоматизация проверки документов.",
+                    fullDesc: "Автоматическая проверка Google Sheets, формирование отчётов и отправка напоминаний сотрудникам.",
                     tags: ["Python", "Schedule", "Telegram"],
                     features: ["Ежедневная проверка", "Персонализация", "Excel отчёты"],
                     tech: ["Python", "Pandas", "Telegram Bot"],
@@ -928,7 +913,8 @@
                     id: 8,
                     title: "Email → Airtable",
                     icon: "fa-inbox",
-                    description: "Импорт данных из входящих писем и PDF-вложений в Airtable с автоматической обработкой.",
+                    shortDesc: "Импорт данных из писем в Airtable.",
+                    fullDesc: "Импорт данных из входящих писем и PDF-вложений в Airtable с автоматической обработкой.",
                     tags: ["Make", "Python", "Airtable API"],
                     features: ["Парсинг писем", "Структурирование", "Webhooks"],
                     tech: ["Python", "IMAP", "Airtable"],
@@ -938,7 +924,8 @@
                     id: 9,
                     title: "Постмейкер для брендов",
                     icon: "fa-wand-sparkles",
-                    description: "Автоматический постинг в Telegram каналы с генерацией дизайна, хэштегов и уникальных описаний.",
+                    shortDesc: "Автоматический постинг с дизайном.",
+                    fullDesc: "Автоматический постинг в Telegram каналы с генерацией дизайна, хэштегов и уникальных описаний.",
                     tags: ["Node.js", "Figma API", "Telegraf"],
                     features: ["Шаблоны дизайна", "Расписание", "Аналитика"],
                     tech: ["Node.js", "Figma API", "Grammy"],
@@ -981,7 +968,7 @@
             card.innerHTML = `
                 <div class="project-icon"><i class="fas ${project.icon}"></i></div>
                 <h4>${project.title}</h4>
-                <p style="color: #cbd5e1; font-size: 0.9rem; margin-bottom: 0.5rem;">${project.description.substring(0, 70)}...</p>
+                <p style="color: #cbd5e1; font-size: 0.9rem; margin-bottom: 0.5rem;">${project.shortDesc}</p>
                 <div class="project-tags">
                     ${project.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
                 </div>
@@ -1096,7 +1083,7 @@
                     </div>
                     <div class="project-detail-info">
                         <div class="detail-title">${project.title}</div>
-                        <div class="detail-desc">${project.description}</div>
+                        <div class="detail-desc">${project.fullDesc}</div>
                         <div>
                             <h4 style="margin-bottom: 0.8rem; color: #ff00ff; font-size: 1.1rem;">Технологии</h4>
                             <div class="tech-list">
